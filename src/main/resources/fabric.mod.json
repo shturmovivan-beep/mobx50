@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "mobx50",
+  "version": "1.0.0",
+  "name": "Mob Spawn x50",
+  "description": "Increases mob caps 50x",
+  "environment": "*",
+  "entrypoints": { "main": ["com.example.mobx50.MobX50"] },
+  "mixins": ["mobx50.mixins.json"],
+  "depends": { "fabricloader": ">=0.16.0", "minecraft": "1.21.11", "java": ">=21" }
+}
