@@ -29,4 +29,12 @@ public abstract class SpawnCloneMixin {
                 Entity e = self.getType().create(sw, SpawnReason.NATURAL);
                 if (!(e instanceof MobEntity clone)) continue;
                 clone.setPosition(self.getX(), self.getY(), self.getZ());
-                clone.setYaw(self.getYaw())
+                clone.setYaw(self.getYaw());
+                clone.initialize(sw, difficulty, SpawnReason.NATURAL, null);
+                sw.spawnEntity(clone);
+            }
+        } finally {
+            MobX50.cloning = false;
+        }
+    }
+}
